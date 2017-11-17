@@ -1,0 +1,8 @@
+[
+  {"Technology": "html/css", "mode": "frontend", "isSpecial": true},
+  {"Technology": "javascript", "mode": "frontend", "isSpecial": true},
+ // {"Technology": "html/css", "mode": "frontend", "isSpecial": false},
+  //{"Technology": "javascript", "mode": "frontend", "isSpecial": true},
+ // {"Technology": "html/css", "mode": "frontend", "isSpecial": false},
+ // {"Technology": "javascript", "mode": "frontend", "isSpecial": true}
+]                          

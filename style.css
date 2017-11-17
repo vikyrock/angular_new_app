@@ -1,0 +1,45 @@
+/* Styles go here */
+
+li.active a { color: red; }
+
+.navbar{
+	background-color : black;
+	color : white;
+	margin-right: 7px;
+    margin-left: 2px;
+}
+
+
+.container-fluid {
+ padding-right: 0px; 
+  padding-left: 0px; 
+   margin-right: auto;
+  margin-left: auto;
+}
+
+body {
+font-family: 'Open Sans', sans-serif;
+}
+
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: 35px;
+    margin-left: 26px;
+}
+
+li.active a {
+    color: #777;
+}
+
+ a {
+    color:white;
+}
+
+ .logo-small {
+      color: #d84b6b;
+      font-size: 50px;
+  }
+  
+  .bg-grey {
+    background-color: rgba(0,0,0,.075);
+}

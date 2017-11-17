@@ -1,0 +1,140 @@
+<style>
+
+body, html {
+    height: auto;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+}
+
+.card-container.card {
+    max-width: 500px;
+    padding: 40px 40px;
+}
+.card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 70px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#body{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+	text-align:justify;
+}	
+	label {
+  color: #555;
+  font-weight: bold;
+  margin-right: 10px;
+  display: block;
+}
+
+input {
+  border: 2px solid #2196F3;
+  width: 100%;
+  outline: none;
+  padding: 4px;
+  border-radius: 5px;
+  margin: 5px 0 10px 0;
+}
+
+p {
+  color: red;
+  font-weight: bold;
+  padding: 0;
+  margin: 5px 0 40px 0;
+}
+	.valid.false {
+      background: red;
+    }
+    
+    .valid.true {
+      background: green;
+    }
+    
+    .error {
+      color: red;
+    }
+	
+</style>
+
+
+	<div class="container">
+        <div class="card card-container">
+			<h3><strong>Registration Form</strong></h3>
+			<form name="personForm" ng-submit="sendForm()">
+			<label for="name">Name</label>
+			<input id="name" name="name" type="text" ng-model="person.name" required />
+			<span class="error" ng-show="personForm.name.$error.required"> Required! </span>
+			<br />
+			<br />
+		
+			
+			
+			
+			<label for="email">Email</label>
+			<input id="email" name="email" type="email" ng-model="person.email" required />
+			<span class="error" ng-show="personForm.email.$error.required">Required!</span>
+			<span class="error" ng-show="personForm.email.$error.email">Invalid Email!</span>
+			<br />
+			<br />
+			
+			<label for="password">Password</label>
+			<input id="password" name="password" type="password" ng-model="person.password" required />
+			<span class="error" ng-show="personForm.password.$error.required">Required!</span>
+			<span class="error" ng-show="personForm.password.$error.email">choose strong password!</span>
+			<br />
+			<br />
+			
+			
+             
+
+			
+			
+			<label for="repassword">Confirm Password</label>
+			<!-- <input id="re-password" name="re-password" type="password" ng-model="person.re-password" required /> -->
+			<input type="password" name="rePassword" ng-model="personForm.rePassword" required  compare-to="personForm.password" />
+
+			<div ng-messages="personForm.rePassword.$error" ng-messages-include="messages.html"></div>
+			<!-- <span class="error" ng-show="personForm.re-password.$error.required">Required!</span>
+			<span class="error" ng-show="personForm.re-password.$error.email">please enter the same password</span> -->
+			<br />
+			<br />
+		
+			<label for="contact">Contact No</label>
+			<input id="mobile" name="mobile" type="number" ng-model="person.mobile" required />
+			<span class="error" ng-show="personForm.mobile.$error.required">Required number!</span>
+			<span class="error" ng-show="personForm.mobile.$error.mobile">Invalid mobile!</span>
+			<br />
+			<br />
+			
+			<label for="adress">Address</label>
+			<input id="address" name="address" type="text" ng-model="person.address" required />
+			<span class="error" ng-show="personForm.address.$error.required"> Required! </span>
+			<br />
+			<br />
+
+	 
+			<input type="checkbox"  style="text-align: left" ng-model="terms" name="terms" id="terms" required >
+			<div for="terms">I Agree to the terms.</div>
+			<span class="error" ng-show="personForm.terms.$error.required">You must agree to the terms</span>
+			<br />
+			<br />
+			<button type="submit">Submit Form</button>
+			<br />
+			<br />
+		
+			<span>{{msg}}</span>
+		
+			</form>
+		</div>
+	</div>
